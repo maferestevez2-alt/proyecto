@@ -1,0 +1,24 @@
+<h2>Crear cuenta nueva</h2>
+    <link rel="stylesheet" href="{{ url_for('static', filename='directivos.css') }}">
+
+
+<form method="POST">
+    <label>Usuario:</label>
+    <input type="text" name="usuario" required>
+
+    <label>Contraseña:</label>
+    <input type="password" name="password" required>
+
+    <label>Rol:</label>
+    <select name="rol" required>
+        <option value="">Selecciona</option>
+        <option value="admin">Admin</option>
+        <option value="docente">Docente</option>
+        <option value="alumno">Alumno</option>
+    </select>
+
+    <a href="{{ url_for('login') }}">Regresar</a>
+
+    <button type="submit">Crear cuenta</button>
+</form>
+

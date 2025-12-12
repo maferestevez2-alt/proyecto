@@ -1,0 +1,166 @@
+/* =============================
+   RESET Y GENERAL
+==============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4ff; /* azul muy claro */
+    color: #003366; /* azul oscuro para texto */
+    padding: 20px;
+}
+
+/* =============================
+   ENCABEZADOS
+==============================*/
+h1, h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* =============================
+   FORMULARIOS
+==============================*/
+form {
+    background-color: #ffffff;
+    border: 1px solid #005bbb;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 15px auto;
+    box-shadow: 0 4px 12px rgba(0, 91, 187, 0.15);
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #0077dd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.2s;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #004f9f;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #005bbb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #004f9f;
+}
+
+/* =============================
+   TABLA
+==============================*/
+table {
+    width: 95%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #005bbb;
+    box-shadow: 0 4px 12px rgba(0, 91, 187, 0.15);
+    font-size: 14px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #aad3ff;
+}
+
+th {
+    background-color: #005bbb;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #e8f2ff;
+}
+
+tr:hover {
+    background-color: #cce4ff;
+}
+
+/* =============================
+   BOTONES EN TABLA
+==============================*/
+a {
+    text-decoration: none;
+    color: rgb(23, 22, 22);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: opacity 0.2s;
+}
+
+a[href*='editar'] {
+    background-color: #0077dd;
+}
+
+a[href*='eliminar'] {
+    background-color: #bb0000;
+}
+
+a[href*='eliminar']:hover {
+    background-color: #a00000;
+}
+
+/* =============================
+   BOTÓN REGRESAR
+==============================*/
+.volver {
+    display: block;
+    width: 140px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #0077dd;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.volver:hover {
+    background-color: #005f99;
+}
+
+/* =============================
+   FORMULARIO DE BÚSQUEDA
+==============================*/
+.search-form {
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+}
+
+.search-form button {
+    width: auto;
+}

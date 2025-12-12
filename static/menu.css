@@ -1,0 +1,214 @@
+/* ==============================
+   RESET Y FUENTES
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==============================
+   BODY
+============================== */
+body {
+    background: #e6f1ff;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==============================
+   SIDEBAR
+============================== */
+.sidebar {
+    width: 250px;
+    background: #005bbb;
+    color: white;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    position: relative;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background: #003366;
+}
+
+/* ==============================
+   SUBMENÚ DESPLEGABLE
+============================== */
+.sidebar ul li ul {
+    display: none;
+    list-style: none;
+    background: #0077dd;
+}
+
+.sidebar ul li:hover ul {
+    display: block;
+}
+
+.sidebar ul li ul li a {
+    padding-left: 40px;
+    background: #0077dd;
+    font-weight: normal;
+}
+
+.sidebar ul li ul li a:hover {
+    background: #004f9f;
+}
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+============================== */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+/* ==============================
+   ENCABEZADOS
+============================== */
+h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #005bbb;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   CUADROS DEL MENU
+============================== */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+    border: 2px solid #005bbb;
+    border-radius: 12px;
+    text-align: center;
+    padding: 25px 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,91,187,0.2);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,91,187,0.3);
+}
+
+.menu-card a {
+    display: block;
+    color: white;
+    background: #005bbb;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu-card a:hover {
+    background: #003366;
+    transform: scale(1.05);
+}
+
+/* ==============================
+   GRAFICAS
+============================== */
+.grafica-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    background: #ffffff;
+    border: 2px solid #005bbb;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,91,187,0.2);
+    text-align: center;
+}
+
+.grafica-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ==============================
+   BOTÓN CERRAR SESIÓN
+============================== */
+.logout {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #bb0000;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout:hover {
+    background: #a00000;
+    transform: scale(1.05);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .sidebar ul {
+        display: flex;
+    }
+    .sidebar ul li {
+        position: relative;
+    }
+    .sidebar ul li ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 200px;
+    }
+}
+

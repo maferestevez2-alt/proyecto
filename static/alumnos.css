@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* =============================
+   GENERAL
+==============================*/
+body {
+    background: #e6f1ff;  /* Azul muy claro */
+    color: #003366;       /* Azul oscuro */
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+/* =============================
+   FORMULARIOS
+==============================*/
+form {
+    background: #ffffff;
+    border: 2px solid #005bbb;
+    padding: 15px;  /* menos padding para hacerlo más compacto */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 650px; /* más estrecho */
+    margin: 15px auto; /* menos espacio arriba/abajo */
+    box-shadow: 0 4px 8px rgba(0, 91, 187, 0.15);
+}
+
+form input {
+    width: 100%;
+    padding: 8px; /* más pequeño */
+    margin-bottom: 10px;
+    border: 1px solid #0077dd;
+    border-radius: 4px;
+    font-size: 13px; /* más pequeño */
+}
+
+form input:focus {
+    outline: none;
+    border: 2px solid #004f9f;
+}
+
+button {
+    width: 100%;
+    padding: 8px; /* más pequeño */
+    background: #005bbb;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px; /* más pequeño */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #004f9f;
+}
+
+/* =============================
+   TABLA
+==============================*/
+table {
+    width: 90%;      /* un poco más estrecha */
+    max-width: 850px; /* más pequeña */
+    margin: 15px auto;
+    border-collapse: collapse;
+    background: white;
+    border: 2px solid #005bbb;
+    box-shadow: 0 3px 8px rgba(0, 91, 187, 0.15);
+    font-size: 13px; /* tabla más compacta */
+}
+
+th, td {
+    padding: 8px; /* menos padding */
+    text-align: center;
+    border: 1px solid #aad3ff;
+}
+
+th {
+    background: #005bbb;
+    color: white;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background: #e8f2ff;
+}
+
+tr:hover {
+    background: #cce4ff;
+}
+
+/* =============================
+   BOTONES EN TABLA
+==============================*/
+a {
+    text-decoration: none;
+    color: white;
+    padding: 3px 6px; /* más pequeño */
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 12px; /* más pequeño */
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.85;
+}
+
+a[href*='editar'] {
+    background: #0077dd;
+}
+
+a[href*='eliminar'] {
+    background: #bb0000;
+}
+
+a[href*='eliminar']:hover {
+    background: #a00000;
+}
+
+/* =============================
+   BOTÓN REGRESAR
+==============================*/
+.volver {
+    display: block;
+    margin: 15px auto;
+    width: 120px;  /* más compacto */
+    text-align: center;
+    background: #0077dd;
+    color: white;
+    padding: 8px;  /* menos padding */
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.volver:hover {
+    background: #005f99;
+}

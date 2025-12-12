@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='directivos.css') }}">
+
+</head>
+<body>
+
+    <h1>📘 Recursos</h1>
+
+    <h3>🔍 Buscar recurso</h3>
+    <form method="POST" action="/">
+        <input type="text" name="busqueda" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+        <button type="button" onclick="buscarVoz()">🎤</button>
+    </form>
+
+    <h3>➕ Agregar recurso</h3>
+    <form method="POST" action="/agregar">
+        <input type="text" name="no_control" placeholder="No. de control" required>
+        <input type="date" name="fecha" required>
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="estadisticas" placeholder="Estadísticas" required>
+        <input type="text" name="materia" placeholder="Materia" required>
+        <input type="text" name="tipo" placeholder="Tipo" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>No. Control</th>
+            <th>Fecha</th>
+            <th>Nombre</th>
+            <th>Estadísticas</th>
+            <th>Materia</th>
+            <th>Tipo</th>
+            <th>Acciones</th>
+        </tr>
+
+        {% for r in recursos %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.no_control }}</td>
+            <td>{{ r.fecha }}</td>
+            <td>{{ r.nombre }}</td>
+            <td>{{ r.estadisticas }}</td>
+            <td>{{ r.materia }}</td>
+            <td>{{ r.tipo }}</td>
+            <td>
+                <a href="/editar/{{ r.id }}">✏ Editar</a>
+                <a href="/eliminar/{{ r.id }}">🗑 Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+<script>
+function buscarVoz(){
+    let reconocimiento = new webkitSpeechRecognition();
+    reconocimiento.lang = "es-ES";
+
+    reconocimiento.onresult = function(event){
+        const texto = event.results[0][0].transcript;
+        document.querySelector("input[name='busqueda']").value = texto;
+    };
+
+    reconocimiento.start();
+}
+</script>
+
+</body>
+</html>
